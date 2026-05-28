@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-white">
+    <!-- NavBar -->
+    <section class="w-full bg-gray-900 py-3 flex justify-center items-center">
+      <nav
+        class="max-w-7xl mx-auto px-6 w-full flex items-center justify-between"
+      >
+        <div class="flex-shrink-0">
+          <a href="#" class="text-2xl font-bold text-white tracking-tight">
+            Logo<span class="text-indigo-500">.</span>
+          </a>
+        </div>
+
+        <div
+          class="bg-[#111111] border border-gray-800 rounded-full px-6 py-2 flex items-center space-x-1 sm:space-x-4 shadow-xl"
+        >
+          <a
+            href="#home"
+            class="relative block px-3 py-1.5 text-sm font-medium text-gray-400 hover:text-white transition duration-300 after:content-[''] after:absolute after:h-[2px] after:w-0 hover:after:w-[85%] after:bottom-[-2px] after:left-1/2 after:-translate-x-1/2 after:bg-white after:transition-all after:duration-300 after:ease-in-out"
+          >
+            Home
+          </a>
+
+          <a
+            href="#about"
+            class="relative block px-3 py-1.5 text-sm font-medium text-gray-400 hover:text-white transition duration-300 after:content-[''] after:absolute after:h-[2px] after:w-0 hover:after:w-[85%] after:bottom-[-2px] after:left-1/2 after:-translate-x-1/2 after:bg-white after:transition-all after:duration-300 after:ease-in-out"
+          >
+            About
+          </a>
+
+          <a
+            href="#skills"
+            class="relative block px-3 py-1.5 text-sm font-medium text-gray-400 hover:text-white transition duration-300 after:content-[''] after:absolute after:h-[2px] after:w-0 hover:after:w-[85%] after:bottom-[-2px] after:left-1/2 after:-translate-x-1/2 after:bg-white after:transition-all after:duration-300 after:ease-in-out"
+          >
+            Skills
+          </a>
+
+          <a
+            href="#projects"
+            class="relative block px-3 py-1.5 text-sm font-medium text-gray-400 hover:text-white transition duration-300 after:content-[''] after:absolute after:h-[2px] after:w-0 hover:after:w-[85%] after:bottom-[-2px] after:left-1/2 after:-translate-x-1/2 after:bg-white after:transition-all after:duration-300 after:ease-in-out"
+          >
+            Projects
+          </a>
+        </div>
+
+        <div>
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-full shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-0.5"
+          >
+            Let's Talk
+          </a>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Hero -->
+    <section
+      class="w-full bg-black text-white min-h-[85vh] flex items-center py-12 md:py-20 overflow-hidden"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center"
+      >
+        <div class="md:col-span-7 flex flex-col space-y-6 text-left">
+          <span
+            class="text-gray-400 text-lg md:text-xl font-medium tracking-wide"
+          >
+            I Am ARUN
+          </span>
+
+          <!-- Main Heading -->
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight"
+          >
+            Front-End <br />Developer & Designer <br />Azure Certified
+          </h1>
+
+          <!-- Paragraph Description -->
+          <p
+            class="text-gray-400 text-base md:text-lg max-w-xl leading-relaxed font-light"
+          >
+            Blending thoughtful UI design with clean, responsive development to
+            create websites that look great and perform flawlessly.
+          </p>
+
+          <!--  CV Button -->
+          <div class="pt-2">
+            <a
+              href="#download"
+              class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-gray-300 bg-[#161616] border border-gray-800 hover:bg-white hover:text-black hover:border-white rounded-lg transition duration-300 ease-in-out shadow-md"
+            >
+              Download CV
+            </a>
+          </div>
+
+          <!-- Social Icons Link -->
+          <div class="flex items-center space-x-6 pt-4">
+            <a
+              href="https://www.linkedin.com/in/arun-kahar-4b404b217/"
+              class="text-gray-400 hover:text-white text-2xl transition duration-200"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/arunkahar09"
+              class="text-gray-400 hover:text-white text-2xl transition duration-200"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="md:col-span-5 flex justify-center md:justify-end relative">
+          <!-- Profile Image -->
+          <div
+            class="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 max-w-[400px] aspect-square rounded-full overflow-hidden bg-black shadow-2xl"
+          >
+            <img
+              src="https://res.cloudinary.com/dxgaylapl/image/upload/v1779972678/1000379439_p0onmk.webp"
+              alt="Developer Profile"
+              class="w-full h-full object-cover grayscale contrast-115 brightness-90 transition duration-500 hover:scale-105 rounded-full"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- skill -->
+
+    <section
+      class="w-full bg-[#0a0a0c] text-white py-20 relative overflow-hidden"
+    >
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[250px] bg-amber-500/10 blur-[120px] rounded-full pointer-events-none"
+      ></div>
+
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-14 space-y-2">
+          <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white">
+            Skills
+          </h2>
+          <div class="w-12 h-[2px] bg-amber-500/60 mx-auto mt-4"></div>
+        </div>
+
+        <!--  Box Layout  -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Skill Box 1 -->
+          <div
+            class="flex items-center space-x-3 bg-[#e2c19d]/10 border border-[#e2c19d]/20 hover:border-[#e2c19d]/50 rounded-xl p-4 transition-all duration-300 group cursor-default hover:shadow-[0_0_20px_rgba(226,193,157,0.1)]"
+          >
+            <div
+              class="text-[#e2c19d] text-lg bg-white/5 w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
+            >
+              <i class="fa-regular fa-gem"></i>
+            </div>
+            <span
+              class="text-sm font-medium text-gray-200 group-hover:text-white transition-colors"
+              >C++
+            </span>
+          </div>
+
+          <!-- Skill Box 2 -->
+          <div
+            class="flex items-center space-x-3 bg-[#e2c19d]/10 border border-[#e2c19d]/20 hover:border-[#e2c19d]/50 rounded-xl p-4 transition-all duration-300 group cursor-default hover:shadow-[0_0_20px_rgba(226,193,157,0.1)]"
+          >
+            <div
+              class="text-[#e2c19d] text-lg bg-white/5 w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
+            >
+              <i class="fa-regular fa-gem"></i>
+            </div>
+            <span
+              class="text-sm font-medium text-gray-200 group-hover:text-white transition-colors"
+              >Frontend Dev</span
+            >
+          </div>
+
+          <!-- Skill Box 3 -->
+          <div
+            class="flex items-center space-x-3 bg-[#e2c19d]/10 border border-[#e2c19d]/20 hover:border-[#e2c19d]/50 rounded-xl p-4 transition-all duration-300 group cursor-default hover:shadow-[0_0_20px_rgba(226,193,157,0.1)]"
+          >
+            <div
+              class="text-[#e2c19d] text-lg bg-white/5 w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
+            >
+              <i class="fa-regular fa-gem"></i>
+            </div>
+            <span
+              class="text-sm font-medium text-gray-200 group-hover:text-white transition-colors"
+              >HTML / CSS</span
+            >
+          </div>
+
+          <!-- Skill Box 4 -->
+          <div
+            class="flex items-center space-x-3 bg-[#e2c19d]/10 border border-[#e2c19d]/20 hover:border-[#e2c19d]/50 rounded-xl p-4 transition-all duration-300 group cursor-default hover:shadow-[0_0_20px_rgba(226,193,157,0.1)]"
+          >
+            <div
+              class="text-[#e2c19d] text-lg bg-white/5 w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
+            >
+              <i class="fa-regular fa-gem"></i>
+            </div>
+            <span
+              class="text-sm font-medium text-gray-200 group-hover:text-white transition-colors"
+              >JavaScript</span
+            >
+          </div>
+
+          <!-- Skill Box 5 -->
+          <div
+            class="flex items-center space-x-3 bg-[#e2c19d]/10 border border-[#e2c19d]/20 hover:border-[#e2c19d]/50 rounded-xl p-4 transition-all duration-300 group cursor-default hover:shadow-[0_0_20px_rgba(226,193,157,0.1)]"
+          >
+            <div
+              class="text-[#e2c19d] text-lg bg-white/5 w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
+            >
+              <i class="fa-regular fa-gem"></i>
+            </div>
+            <span
+              class="text-sm font-medium text-gray-200 group-hover:text-white transition-colors"
+              >DBMS</span
+            >
+          </div>
+
+          <!-- Skill Box 7 (Locked / Learning State Placeholder as shown in screenshot) -->
+          <div
+            class="flex items-center space-x-3 bg-white/[0.02] border border-white/5 rounded-xl p-4 cursor-default relative group"
+          >
+            <div
+              class="text-gray-600 text-lg w-10 h-10 rounded-lg flex items-center justify-center"
+            >
+              <i class="fa-solid fa-lock text-xs"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-500">Learning...</span>
+          </div>
+
+          <!-- Skill Box 8 (Learning State Placeholder) -->
+          <div
+            class="flex items-center space-x-3 bg-white/[0.02] border border-white/5 rounded-xl p-4 cursor-default relative group"
+          >
+            <div
+              class="text-gray-600 text-lg w-10 h-10 rounded-lg flex items-center justify-center"
+            >
+              <i class="fa-solid fa-lock text-xs"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-500">Learning...</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project -->
+    <section
+      class="w-full bg-[#0a0a0c] text-white py-20 relative overflow-hidden"
+    >
+      <!-- background me premium look dene ke liye amber light layer lagayi hai -->
+      <div
+        class="absolute bottom-10 left-1/4 w-[600px] h-[300px] bg-amber-500/[0.04] blur-[150px] rounded-full pointer-events-none"
+      ></div>
+
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <!-- Header Part -->
+        <div class="text-center mb-16 space-y-2">
+          <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white">
+            Portfolio
+          </h2>
+          <p
+            class="text-gray-400 text-sm md:text-base tracking-wide font-light"
+          >
+            Recent Work & Creative Case Studies
+          </p>
+          <div class="w-12 h-[2px] bg-amber-500/60 mx-auto mt-4"></div>
+        </div>
+
+        <!-- Projects Grid Layout: Desktop me 3 cards ek line me set honge -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="group bg-[#111111]/40 border border-gray-900 rounded-2xl overflow-hidden transition-all duration-300 hover:border-amber-500/30 hover:shadow-[0_10px_30px_rgba(226,193,157,0.05)] flex flex-col h-full"
+          >
+            <!-- Image Container - Hover karne par grayscale hat jayega aur halka scale-up hoga -->
+            <div
+              class="w-full aspect-[16/10] overflow-hidden bg-black relative"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=600"
+                alt="Project One"
+                class="w-full h-full object-cover grayscale opacity-75 group-hover:opacity-100 group-hover:scale-102 group-hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+            <!-- Project Details -->
+            <div class="p-6 flex flex-col flex-grow justify-between">
+              <div class="space-y-3">
+                <span
+                  class="text-xs font-semibold uppercase tracking-widest text-amber-500/70"
+                  >Web Design</span
+                >
+                <h3
+                  class="text-xl font-bold text-gray-100 group-hover:text-white transition"
+                >
+                  E-Commerce Platform
+                </h3>
+                <p class="text-sm text-gray-400 font-light leading-relaxed">
+                  A minimal digital shopping experience constructed with clean
+                  code framework mechanics and user interaction flows.
+                </p>
+              </div>
+              <!-- View Link -->
+              <div
+                class="pt-6 flex items-center text-sm font-medium text-gray-300 group-hover:text-amber-400 transition-colors"
+              >
+                <span>View Project</span>
+                <svg
+                  class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="group bg-[#111111]/40 border border-gray-900 rounded-2xl overflow-hidden transition-all duration-300 hover:border-amber-500/30 hover:shadow-[0_10px_30px_rgba(226,193,157,0.05)] flex flex-col h-full"
+          >
+            <div
+              class="w-full aspect-[16/10] overflow-hidden bg-black relative"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600"
+                alt="Project Two"
+                class="w-full h-full object-cover grayscale opacity-75 group-hover:opacity-100 group-hover:scale-102 group-hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+            <div class="p-6 flex flex-col flex-grow justify-between">
+              <div class="space-y-3">
+                <span
+                  class="text-xs font-semibold uppercase tracking-widest text-amber-500/70"
+                  >Development</span
+                >
+                <h3
+                  class="text-xl font-bold text-gray-100 group-hover:text-white transition"
+                >
+                  SaaS Analytics Dashboard
+                </h3>
+                <p class="text-sm text-gray-400 font-light leading-relaxed">
+                  High-performance complex user data panels displaying
+                  operational metrics with responsive layouts and pixel design
+                  grid systems.
+                </p>
+              </div>
+              <div
+                class="pt-6 flex items-center text-sm font-medium text-gray-300 group-hover:text-amber-400 transition-colors"
+              >
+                <span>View Project</span>
+                <svg
+                  class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="group bg-[#111111]/40 border border-gray-900 rounded-2xl overflow-hidden transition-all duration-300 hover:border-amber-500/30 hover:shadow-[0_10px_30px_rgba(226,193,157,0.05)] flex flex-col h-full"
+          >
+            <div
+              class="w-full aspect-[16/10] overflow-hidden bg-black relative"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600"
+                alt="Project Three"
+                class="w-full h-full object-cover grayscale opacity-75 group-hover:opacity-100 group-hover:scale-102 group-hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+            <div class="p-6 flex flex-col flex-grow justify-between">
+              <div class="space-y-3">
+                <span
+                  class="text-xs font-semibold uppercase tracking-widest text-amber-500/70"
+                  >Branding</span
+                >
+                <h3
+                  class="text-xl font-bold text-gray-100 group-hover:text-white transition"
+                >
+                  Creative Studio Landing
+                </h3>
+                <p class="text-sm text-gray-400 font-light leading-relaxed">
+                  Modern agency portfolio highlighting seamless animations, rich
+                  contrast structure typography, and components.
+                </p>
+              </div>
+              <div
+                class="pt-6 flex items-center text-sm font-medium text-gray-300 group-hover:text-amber-400 transition-colors"
+              >
+                <span>View Project</span>
+                <svg
+                  class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- About -->
+    <section class="w-full bg-[#0a0a0c] text-white py-20 relative overflow-hidden">
+    <!-- Subtle Amber Glow Layer matching your design style -->
+    <div class="absolute top-1/4 right-1/4 w-[500px] h-[250px] bg-amber-500/[0.03] blur-[130px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+        
+        <!-- Section Header -->
+        <div class="space-y-2 mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white">About Me</h2>
+            <div class="w-12 h-[2px] bg-amber-500/60 mx-auto mt-4"></div>
+        </div>
+
+        <!-- Description Paragraphs matching image_c83d89.jpg structure -->
+        <div class="space-y-6 max-w-3xl mx-auto mb-16">
+            <p class="text-gray-300 text-lg md:text-xl font-medium leading-relaxed">
+                I'm a front-end developer and designer passionate about crafting clean, intuitive, and responsive digital experiences.
+            </p>
+            <p class="text-gray-400 text-base md:text-lg font-light leading-relaxed">
+                I focus on turning complex ideas into seamless interfaces by understanding user needs, designing thoughtful UI layouts, and ensuring smooth, premium interactions across all platforms and devices.
+            </p>
+        </div>
+
+        <!-- My Approach Block from image_c83d89.jpg Layout -->
+        <div class="mb-16">
+            <h3 class="text-xs font-semibold uppercase tracking-widest text-amber-500/70 mb-6">My Approach</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+                
+                <!-- Step 1 -->
+                <div class="bg-[#111111]/60 border border-gray-900 rounded-xl p-4 flex items-center space-x-4">
+                    <span class="text-xs font-bold text-gray-400 bg-white/5 w-8 h-8 rounded-lg flex items-center justify-center border border-gray-800">01</span>
+                    <span class="text-sm font-medium text-gray-300">Understand users & goals</span>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-[#111111]/60 border border-gray-900 rounded-xl p-4 flex items-center space-x-4">
+                    <span class="text-xs font-bold text-gray-400 bg-white/5 w-8 h-8 rounded-lg flex items-center justify-center border border-gray-800">02</span>
+                    <span class="text-sm font-medium text-gray-300">Create clean UI layouts</span>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-[#111111]/60 border border-gray-900 rounded-xl p-4 flex items-center space-x-4">
+                    <span class="text-xs font-bold text-gray-400 bg-white/5 w-8 h-8 rounded-lg flex items-center justify-center border border-gray-800">03</span>
+                    <span class="text-sm font-medium text-gray-300">Responsive experiences</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Metric Counter Grid System from image_c83d89.jpg layout -->
+        <div class="grid grid-cols-3 gap-4 pt-8 border-t border-gray-900 max-w-2xl mx-auto">
+            <div class="space-y-1">
+                <span class="block text-3xl md:text-4xl font-bold text-white tracking-tight">02+</span>
+                <span class="block text-xs md:text-sm text-gray-500 uppercase tracking-wider font-medium">Years Of Experience</span>
+            </div>
+            <div class="space-y-1">
+                <span class="block text-3xl md:text-4xl font-bold text-white tracking-tight">15+</span>
+                <span class="block text-xs md:text-sm text-gray-500 uppercase tracking-wider font-medium">Projects Completed</span>
+            </div>
+            <div class="space-y-1">
+                <span class="block text-3xl md:text-4xl font-bold text-white tracking-tight">05+</span>
+                <span class="block text-xs md:text-sm text-gray-500 uppercase tracking-wider font-medium">Clients Served</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+  </body>
+</html>

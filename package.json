@@ -11,12 +11,16 @@
   "description": "Tour Travel Website ",
   "dependencies": {
     "@tailwindcss/cli": "^4.3.0",
+    "dotenv": "^17.4.2",
     "ejs": "^6.0.1",
     "express": "^5.2.1",
+    "mongoose": "^9.6.3",
+    "nodemailer": "^8.0.9",
     "nodemon": "^3.1.14",
     "serverless-http": "^4.0.0",
     "sqlite3": "^6.0.1",
-    "tailwindcss": "^4.3.0"
+    "tailwindcss": "^4.3.0",
+    "twilio": "^6.0.2"
   },
   "devDependencies": {
     "daisyui": "^5.5.20"

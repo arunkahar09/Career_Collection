@@ -1,2 +1,5 @@
 1.tailwindcss 
 npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+
+
+mujhe letstalk page banana hai aur jo bhi us page ko fill kare to mere mail  per and mere whatsapp per message aaye  aisa hona chahiye ye kaise banenega 

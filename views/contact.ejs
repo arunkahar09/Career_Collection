@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let's Talk - Arun Kahar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-[#0a0a0c]">
+
+    <!-- NavBar -->
+    <section class="w-full bg-gray-900 py-3 flex justify-center items-center sticky top-0 z-50">
+      <nav class="max-w-7xl mx-auto px-6 w-full flex items-center justify-between">
+        <div class="flex-shrink-0">
+          <!-- Alag page se home page par wapas jaane ke liye href="/" lagaya hai -->
+          <a href="/" class="text-2xl font-bold text-white tracking-tight">
+            Logo<span class="text-indigo-500">.</span>
+          </a>
+        </div>
+
+        <div class="bg-[#111111] border border-gray-800 rounded-full px-6 py-2 flex items-center space-x-1 sm:space-x-4 shadow-xl">
+          <a href="/#home" class="relative block px-3 py-1.5 text-sm font-medium text-gray-400 hover:text-white transition duration-300">Home</a>
+          <a href="/#about" class="relative block px-3 py-1.5 text-sm font-medium text-gray-400 hover:text-white transition duration-300">About</a>
+          <a href="/#skills" class="relative block px-3 py-1.5 text-sm font-medium text-gray-400 hover:text-white transition duration-300">Skills</a>
+          <a href="/#projects" class="relative block px-3 py-1.5 text-sm font-medium text-gray-400 hover:text-white transition duration-300">Projects</a>
+        </div>
+
+        <div>
+          <a href="/contact" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-full shadow-lg transition duration-200">
+            Let's Talk
+          </a>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Let's Talk Form Container -->
+    <section class="w-full bg-[#0a0a0c] text-white py-20 relative overflow-hidden min-h-[calc(100vh-68px)] flex items-center">
+      <div class="absolute -bottom-20 -right-20 w-[500px] h-[300px] bg-amber-500/[0.03] blur-[120px] rounded-full pointer-events-none"></div>
+      <div class="absolute -top-10 -left-10 w-[400px] h-[200px] bg-indigo-500/[0.02] blur-[100px] rounded-full pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-6 relative z-10 w-full">
+        
+        <div class="text-center mb-16 space-y-2">
+          <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white">Let's Talk</h2>
+          <p class="text-gray-400 text-sm md:text-base tracking-wide font-light">Have a project in mind or just want to say hello? Drop a message!</p>
+          <div class="w-12 h-[2px] bg-amber-500/60 mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- LHS: Quick Contact details -->
+          <div class="lg:col-span-5 space-y-8 bg-[#111111]/30 border border-gray-900 rounded-2xl p-8 backdrop-blur-sm">
+            <div class="space-y-3">
+              <h3 class="text-2xl font-bold text-gray-100">Let's start something great</h3>
+              <p class="text-gray-400 text-sm font-light leading-relaxed">I am available for freelance work, full-time opportunities, or collaborative open-source ventures.</p>
+            </div>
+
+            <div class="space-y-6">
+              <div class="flex items-center space-x-4 group">
+                <div class="w-11 h-11 bg-white/5 border border-gray-800 rounded-xl flex items-center justify-center text-amber-500/80">
+                  <i class="fa-regular fa-envelope text-lg"></i>
+                </div>
+                <div>
+                  <span class="block text-xs uppercase tracking-wider text-gray-500 font-medium">Email Me</span>
+                  <a href="mailto:<%= contactEmail %>" class="text-sm font-medium text-gray-300 hover:text-white transition"><%= contactEmail %></a>
+                </div>
+              </div>
+
+              <div class="flex items-center space-x-4">
+                <div class="w-11 h-11 bg-white/5 border border-gray-800 rounded-xl flex items-center justify-center text-amber-500/80">
+                  <i class="fa-solid fa-location-dot text-lg"></i>
+                </div>
+                <div>
+                  <span class="block text-xs uppercase tracking-wider text-gray-500 font-medium">Based In</span>
+                  <span class="text-sm font-medium text-gray-300"><%= location %></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6 border-t border-gray-900">
+              <span class="block text-xs uppercase tracking-wider text-gray-500 font-medium mb-4">Connect on Socials</span>
+              <div class="flex items-center space-x-4">
+                <% if (socials.linkedin) { %>
+                  <a href="<%= socials.linkedin %>" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-[#161616] border border-gray-800 hover:border-white hover:text-white rounded-lg flex items-center justify-center text-gray-400 text-base transition">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                <% } %>
+                <% if (socials.github) { %>
+                  <a href="<%= socials.github %>" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-[#161616] border border-gray-800 hover:border-white hover:text-white rounded-lg flex items-center justify-center text-gray-400 text-base transition">
+                    <i class="fab fa-github"></i>
+                  </a>
+                <% } %>
+              </div>
+            </div>
+          </div>
+
+          <!-- RHS: Form Grid -->
+          <form action="/contact" method="POST" class="lg:col-span-7 space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label for="form-name" class="text-xs font-semibold uppercase tracking-wider text-gray-400">Your Name</label>
+                <input type="text" name="name" id="form-name" required placeholder="TONY STARK" class="w-full bg-[#111111]/60 border border-gray-800 focus:border-amber-500/50 text-gray-200 rounded-xl px-4 py-3.5 text-sm outline-none transition" />
+              </div>
+              <div class="space-y-2">
+                <label for="form-email" class="text-xs font-semibold uppercase tracking-wider text-gray-400">Email Address</label>
+                <input type="email" name="email" id="form-email" required placeholder="stark@domain.com" class="w-full bg-[#111111]/60 border border-gray-800 focus:border-amber-500/50 text-gray-200 rounded-xl px-4 py-3.5 text-sm outline-none transition" />
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label for="form-subject" class="text-xs font-semibold uppercase tracking-wider text-gray-400">Subject</label>
+              <input type="text" name="subject" id="form-subject" required placeholder="Project Partnership opportunity" class="w-full bg-[#111111]/60 border border-gray-800 focus:border-amber-500/50 text-gray-200 rounded-xl px-4 py-3.5 text-sm outline-none transition" />
+            </div>
+
+            <div class="space-y-2">
+              <label for="form-message" class="text-xs font-semibold uppercase tracking-wider text-gray-400">Message</label>
+              <textarea name="message" id="form-message" rows="5" required placeholder="Tell me about your ideas..." class="w-full bg-[#111111]/60 border border-gray-800 focus:border-amber-500/50 text-gray-200 rounded-xl px-4 py-3.5 text-sm outline-none transition resize-none"></textarea>
+            </div>
+
+            <div class="pt-2">
+              <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-full shadow-lg transition">
+                Send Message
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>

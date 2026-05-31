@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, "style")));
 app.use(express.static(path.join(__dirname, "JS")));
 
 // View Engine Setup
-const port = 8080;
+const port = process.env.PORT || 8080;
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 

@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const nodemailer = require("nodemailer");
+const nodemailer = require("nodemailer"); // 🌟 Sirf email sending package required hai
 
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
+// Static Files Layout Configurations
 app.use(express.static(path.join(__dirname)));
 app.use('/src', express.static(path.join(__dirname, 'src')));
 app.use(express.static(path.join(__dirname, "style")));
@@ -94,41 +94,55 @@ app.get('/contact', (req, res) => {
   });
 });
 
-// Contacts POST Route (Bina DB ke mail send karne ke liye)
+// 🌟 Contacts POST Route: Sirf Email par mail bhejne ke liye
 app.post('/contact', async (req, res) => {
   const { name, email, subject, message } = req.body;
+
   try {
+    // EMAIL TRIGGER SYSTEM (Nodemailer Configuration)
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
         user: "arunkahar09@gmail.com",
-        pass: process.env.EMAIL_PASS // 🌟 Vercel dashboard par add kijiye
+        pass: process.env.EMAIL_PASS // Vercel dashboard se secure aayega
       }
     });
 
     const mailOptions = {
       from: "arunkahar09@gmail.com",
-      to: "arunkahar09@gmail.com", 
-      subject: `Portfolio: ${subject}`,
-      html: `<h3>New Message Received</h3>
-             <p><b>Name:</b> ${name}</p>
-             <p><b>Email:</b> ${email}</p>
-             <p><b>Message:</b> ${message}</p>`
+      to: "arunkahar09@gmail.com", // Aapko khud apne hi mail par notification milega
+      subject: `Portfolio Lead: ${subject}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; padding: 20px; color: #333; background-color: #f4f4f5; border-radius: 10px;">
+          <h2 style="color: #4f46e5;">New Contact Form Submission!</h2>
+          <hr style="border: 0; border-top: 1px solid #e4e4e7;" />
+          <p><b>Name:</b> ${name}</p>
+          <p><b>Sender Email:</b> ${email}</p>
+          <p><b>Subject:</b> ${subject}</p>
+          <p><b>Message:</b></p>
+          <div style="background: #ffffff; padding: 15px; border-left: 4px solid #4f46e5; border-radius: 4px; font-style: italic;">
+            ${message}
+          </div>
+        </div>
+      `
     };
-
+    
+    // Email fire executing trigger
     await transporter.sendMail(mailOptions);
+
+    // Mail successfully jaane ke baad redirect back to home page
     res.redirect("/?success=true");
+
   } catch (error) {
-    console.error("Mail Error:", error);
+    console.error("Mail Delivery System Failure:", error);
     res.redirect("/?success=false");
   }
 });
 
 // Start Server
 app.listen(port, () => {
-  console.log(`Server started on port ${port}`);
+  console.log(`Server running on port ${port}`);
 });
-
 
 
 
